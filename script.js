@@ -1,38 +1,15 @@
-//! Реализуем Singleton через замыкание
+const buttonPlus = document.querySelector('.button-plus');
+const buttonMinus = document.querySelector('.button-minus');
+const counter = document.querySelector('.counter__value');
 
-function Universe() {
-  
-  // если при инициализации нового экземпляра у нас уже существует флаг exists(т.е. мы его ранее проинициализировали)
-  // то мы останавливаем процесс создания нового instance и возвращаем старый instance
-    
-  if (Universe.exists) {
-    return Universe.instance
+buttonPlus.addEventListener('click', increaseCounter);
+buttonMinus.addEventListener('click', decreaseCounter);
+
+function increaseCounter() {
+  counter.innerHTML++;
+}
+function decreaseCounter() {
+  if(counter.innerHTML > 0) {
+    counter.innerHTML--;
   }
-
-  Universe.instance = this; // заносим в поле instance контекст функции конструктора
-  Universe.exists = true; // если true, то уже был проинициализирован
-
-  this.size = 100;
 }
-
-Universe.prototype.getSize = function() {
-    return this.size;
-}
-
-Universe.prototype.setSize = function(value) {
-    this.size = value;
-}
-
-let a = new Universe();
-let b = new Universe();
-
-console.log(a.getSize(), b.getSize());
-
-a.setSize(200);
-
-console.log(a.getSize(), b.getSize());
-
-console.log(`a === b ? ${a === b}`)
-
-
-// 2 объекта a и b ссылаются на 1 объект singlton
