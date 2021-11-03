@@ -1,30 +1,50 @@
-const arr = [1,45,-9,6,6,67,2,3,71,70,14];
-const arr1 = [1,3];
+const arr = [1,45,-9,6,6,67,4,3,71,70,14];
 
+const findMaxNumber = (arr) => (arr.length !== 0) ? Math.max(...arr) : null;
+const findMinNumber = (arr) => (arr.length !== 0) ? Math.min(...arr) : null;
+const isEvenNumber = (num) => num % 2 === 0;
 
-//! 1
 /**
- * Создайте массив из 10 чисел. 
+ * 1. Создайте массив из 10 чисел. 
  * Найдите количество элементов массива,
  * которые отличны от наибольшего не более чем на 10%.
  */
 
 function findCountElementsLessMax(arr) {
-  const maxNumber = Math.max(...arr);
+  const maxNumber = findMaxNumber(arr);
   return arr.filter(num => num !== maxNumber && num >=  maxNumber - maxNumber * 0.1).length;
 }
-
+console.log('task1');
 console.log(findCountElementsLessMax(arr));
 
-//! 2
 /**
- * Создайте массив из 10 чисел. 
+ * 2. Создайте массив из 10 чисел. 
  * Найдите и выведите на экран наименьший четный элемент массива.
  */
 
-const findEvenNumbers = (arr) => arr.filter(num => num % 2 === 0);
+const findEvenNumbers = (arr) => arr.filter(isEvenNumber);
 
-const findMinNumber = (arr) => (arr.length !== 0) ? Math.min(...arr) : null;
-   
+console.log('task2');
 console.log(findMinNumber(findEvenNumbers(arr)));
+
+/**
+ * 3. Создать массив из 10 чисел. 
+ * Среди элементов с нечетными номерами найдите наибольший элемент массива, который делится на 3.
+ */
+
+const findNumbersFromOddIndex = (arr) => {
+  return arr.filter( (num, index) => {
+    if (isEvenNumber(index)) {
+      return num;
+    }
+  })
+}
+
+const isDividedByThree = (num) => num % 3 === 0;
+const findNumbersIsDividedByThree = (arr) => arr.filter(isDividedByThree);
+
+console.log('task3');
+
+console.log(findMaxNumber(findNumbersIsDividedByThree(findNumbersFromOddIndex(arr))));
+
 
