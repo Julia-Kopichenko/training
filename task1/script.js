@@ -14,7 +14,7 @@ function findCountElementsLessMax(arr) {
   const maxNumber = findMaxNumber(arr);
   return arr.filter(num => num !== maxNumber && num >=  maxNumber - maxNumber * 0.1).length;
 }
-console.log('task1');
+
 console.log(findCountElementsLessMax(arr));
 
 /**
@@ -24,7 +24,6 @@ console.log(findCountElementsLessMax(arr));
 
 const findEvenNumbers = (arr) => arr.filter(isEvenNumber);
 
-console.log('task2');
 console.log(findMinNumber(findEvenNumbers(arr)));
 
 /**
@@ -43,8 +42,20 @@ const findNumbersFromOddIndex = (arr) => {
 const isDividedByThree = (num) => num % 3 === 0;
 const findNumbersIsDividedByThree = (arr) => arr.filter(isDividedByThree);
 
-console.log('task3');
-
 console.log(findMaxNumber(findNumbersIsDividedByThree(findNumbersFromOddIndex(arr))));
 
+/**
+ * 4. Дан массив и число n. Найдите число в массиве, 
+ * которое наиболее близко к числу n
+ */
 
+const findClosestNumber = (arr, num) => {
+  let result = arr[0];
+  arr.forEach(el => {
+    if(Math.abs(el - num) < Math.abs(num - result)) {
+      result = el;
+    }
+  });
+  return result;
+}
+console.log(findClosestNumber(arr,69));
