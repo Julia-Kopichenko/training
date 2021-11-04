@@ -38,7 +38,6 @@ const findNumbersFromOddIndex = (arr) =>
     }
   })
 
-
 const isDividedByThree = (num) => num % 3 === 0;
 const findNumbersIsDividedByThree = (arr) => arr.filter(isDividedByThree);
 
@@ -49,25 +48,9 @@ console.log(findMaxNumber(findNumbersIsDividedByThree(findNumbersFromOddIndex(ar
  * которое наиболее близко к числу n
  */
 
-const findClosestNumber = (arr, num) => {
-  let result = arr[0];
-  arr.forEach(el => {
-    if(Math.abs(el - num) < Math.abs(num - result)) {
-      result = el;
-    }
+const findClosestNumber = (arr, num) => 
+  arr.reduce((result, current) => {
+    return ((Math.abs(current - num) < Math.abs(num - result))) ? current : result;
   });
-  return result;
-}
-console.log(findClosestNumber(arr,69));
 
-const findClosestNumber2 = (arr, num) => {
-  return arr.reduce((result, current) => {
-    if(Math.abs(current - num) < Math.abs(num - result)) {
-      return result = current;
-    } else {
-      return result;
-    }
-  });
-}
-console.log('use reduce');
-console.log(findClosestNumber2(arr,69));
+console.log(findClosestNumber(arr,69));
