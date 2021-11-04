@@ -9,8 +9,13 @@ const arr = [
  * вывести 'its invalid', если хотя бы в одном объекте a <= b;
  */
 
+// const showIsValidArr = (arr) => {
+//   const result = (arr.find(item => item.b > item.a)) ? 'its invalid' : 'its valid';
+//   console.log(result); 
+// }
+
 const showIsValidArr = (arr) => {
-  let result = (arr.find(item => item.b > item.a)) ? 'its invalid' : 'its valid';
+  const result = (arr.find(({a, b}) => b > a)) ? 'its invalid' : 'its valid';
   console.log(result); 
 }
 
