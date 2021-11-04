@@ -10,24 +10,11 @@ const arr = [
  */
 
 const showIsValidArr = (arr) => {
-  const result = (arr.find(item => item.b > item.a)) ? 'its invalid' : 'its valid';
+  let result = (arr.find(item => item.b > item.a)) ? 'its invalid' : 'its valid';
   console.log(result); 
 }
+
 showIsValidArr(arr);
-
-// const isObjectFieldValid = (arr) => {
-//   return arr.find(item => item.b > item.a)
-// }
-
-// const compare = (min, max) => max > min;
-// console.log(compare(4,5));
-
-// const isEnterValidObject = (arr, fieldMin, fieldMax) => {
-//   return arr.find(item => item.fieldMax > item.fieldMin)
-// }
-// const isValidObject = (obg) => obg.a > obg.b;
-
-// console.log(isValidObject(obg));
 
 /**
  * 2. На основе массива arr, создать массив объектов у которых поле b возведено в квадрат
@@ -49,3 +36,11 @@ const changeArrayItems = (arr, key, fn) => arr.map(item => changeFieldValue(item
 
 console.log(changeArrayItems(arr, 'b', getSquare)); // [ { a: 2, b: 1 }, { a: 50, b: 144 }, { a: 95, b: 49 } ]
 
+/**
+ * 3. С помощью метода/методов взять все поля a и b и последовательно поместить их в массив
+ *     пример получившегося массива: [2,1,5,12,95,7]
+ */
+
+const resultArray = [].concat(...arr.map(obj => Object.values(obj)));
+
+console.log(resultArray);
