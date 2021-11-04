@@ -59,3 +59,15 @@ const findClosestNumber = (arr, num) => {
   return result;
 }
 console.log(findClosestNumber(arr,69));
+
+const findClosestNumber2 = (arr, num) => {
+  return arr.reduce((result, current) => {
+    if(Math.abs(current - num) < Math.abs(num - result)) {
+      return result = current;
+    } else {
+      return result;
+    }
+  });
+}
+console.log('use reduce');
+console.log(findClosestNumber2(arr,69));
