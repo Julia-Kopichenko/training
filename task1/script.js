@@ -31,13 +31,13 @@ console.log(findMinNumber(findEvenNumbers(arr)));
  * Среди элементов с нечетными номерами найдите наибольший элемент массива, который делится на 3.
  */
 
-const findNumbersFromOddIndex = (arr) => {
-  return arr.filter( (num, index) => {
+const findNumbersFromOddIndex = (arr) => 
+  arr.filter( (num, index) => {
     if (isEvenNumber(index)) {
       return num;
     }
   })
-}
+
 
 const isDividedByThree = (num) => num % 3 === 0;
 const findNumbersIsDividedByThree = (arr) => arr.filter(isDividedByThree);
