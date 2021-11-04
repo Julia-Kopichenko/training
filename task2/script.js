@@ -3,8 +3,6 @@ const arr = [
   {a: 50, b: 12}, 
   {a: 95, b: 7} 
 ];
-const obg = {a: 2, b: 1}
-const obg1 = {x: 2, y: 1}
 
 /**
  * 1. Вывести в консоль 'its valid', если во всех объектах поле a > b, 
@@ -31,4 +29,23 @@ showIsValidArr(arr);
 
 // console.log(isValidObject(obg));
 
+/**
+ * 2. На основе массива arr, создать массив объектов у которых поле b возведено в квадрат
+ */
+
+// вариант 1
+
+const newArr = arr.map((obj) => ({...obj, b: Math.pow(obj.b, 2)}));
+
+console.log(newArr); // [ { a: 2, b: 1 }, { a: 50, b: 144 }, { a: 95, b: 49 } ]
+
+// вариант 2
+
+const getSquare = num => Math.pow(num, 2);
+
+const changeFieldValue = (obj, key, fn) => ({...obj, [key]: fn(obj[key])});
+
+const changeArrayItems = (arr, key, fn) => arr.map(item => changeFieldValue(item, key, fn))
+
+console.log(changeArrayItems(arr, 'b', getSquare)); // [ { a: 2, b: 1 }, { a: 50, b: 144 }, { a: 95, b: 49 } ]
 
