@@ -15,7 +15,8 @@ const footballPlayers = [messi, ronaldo, suarez, buffon, gonsalo, pedro, zuma, r
 
 function groupByTeam(arr) {
     const temp = arr.reduce((acc, player) => {
-        const team = player.team;
+        // const team = player.team;
+        const {team} = player;
 
         if (!acc[team]) {
             acc[team] = [];
@@ -23,9 +24,13 @@ function groupByTeam(arr) {
 
         acc[team].push(player);
         return acc;
+        // return [ ...acc[team], player] // [ FootballPlayer { name: 'Rico', team: 'psg' } ]
     }, {});
 
     return Object.values(temp)
 };
 
 console.log(groupByTeam(footballPlayers));
+
+// use destructuring to get team from player
+// return [ ...acc[team], player ]
