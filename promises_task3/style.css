@@ -1,0 +1,23 @@
+.content-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
+.users {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  align-items: center;
+  /* flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; */
+}
+.user {
+  list-style: none;
+  text-align: center;
+}
+.user__name {
+  font-weight: 700;
+}
