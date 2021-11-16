@@ -1,9 +1,25 @@
-import Post from './post.js';
-
-import WebpackLogo from './assets/webpack-logo.png';
-
 import './styles/style.scss';
 
-const post = new Post('Webpack post title', WebpackLogo);
+import locationResolver from './locationResolver';
 
-console.log('Post to string', post.toString());
+window.addEventListener("load", () => {
+  console.log('start');
+  const app = document.querySelector('#app');
+
+  const location = window.location.pathname;
+
+  locationResolver(location,app)
+
+  if (location) {
+    locationResolver(location,app)
+  }
+})
+
+// window.onpopstate = function () {
+//   console.log('done');
+
+//   const app = document.querySelector('#app');
+//   const location = window.location.hash;
+
+//   locationResolver(location,app)
+// }
