@@ -83,7 +83,7 @@ body {
 .second-page .button {
     margin-bottom: 4rem;
 }
-input[type=text] {
+input {
     width:100%;
     padding: 1.5rem;
     border: 1px solid var(--color-dark-blue);
@@ -117,4 +117,9 @@ input::placeholder {
     text-shadow: var(--color-dark-blue) 0px 0px 5px;
     font-size: 3rem;
     font-style: italic;
+    display: none;
+}
+
+.visible {
+    display: block;
 }

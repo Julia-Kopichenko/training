@@ -1,4 +1,4 @@
-import addEventListenerToBtn from "./addEventListener";
+import addNavLinksHandler from "./addNavLinksHandler";
 
 export default function createMainPage(app) {
   app.innerHTML = `
@@ -7,13 +7,13 @@ export default function createMainPage(app) {
             <h1 class="main-page__title title">Make your choice</h1>
             <p class="main-page__subtitle subtitle">...if you want to know something interesting ;)</p>
             <div class="nav">
-                <a href="/date" class="button button-date" >date</a>
-                <a href="/number" class="button button-number">number</a>
-                <a href="/year" class="button button-year">year</a>
+                <a href="/date" class="button" >date</a>
+                <a href="/number" class="button">number</a>
+                <a href="/year" class="button">year</a>
             </div>
         </section>
     </div>
   `
   const buttons = document.getElementsByClassName('button')
-  addEventListenerToBtn(buttons,app)
+  addNavLinksHandler(buttons,app)
 }

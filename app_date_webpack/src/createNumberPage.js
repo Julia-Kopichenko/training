@@ -4,8 +4,8 @@ export default function  createNumberPage(app) {
         <section class="second-page">
             <p class="title">Please enter the <span class="second-word">number</span></p>
             <div class="form">
-                <input type="text" class="input" placeholder="number">
-                <button class="button button-submit" href="#">surprise me</button>
+                <input type="number" class="input" placeholder="number">
+                <button class="button button-submit">surprise me</button>
             </div>
             <div class="output"></div>
         </section>
