@@ -27,7 +27,6 @@ const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
-  // entry: './index.js',
   entry: {
     main: ['@babel/polyfill', './index.js']
   },
@@ -38,7 +37,9 @@ module.exports = {
   optimization: optimization(),
   devServer: {
     port: 4200,
-    hot: isDev
+    hot: isDev,
+    historyApiFallback: true,
+    // static: './'
   },
   devtool: isDev ? 'source-map' : false,
   plugins: [
