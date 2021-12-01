@@ -1,8 +1,8 @@
 import React from 'react';
 
 // импортируем компоненты
-import Title from '../Title';
-import Nav from '../Nav'
+import MainPage from '../Pages/MainPage';
+import SecondPage from '../Pages/SecondPage';
 
 // общие стили
 import './App.css';
@@ -10,11 +10,9 @@ import './App.css';
 const App = () => {
   return (
     <div className="container">
-        <section className="main-page">
-            <Title />
-            <p className="main-page__subtitle subtitle">...if you want to know something interesting ;)</p>
-            <Nav />
-        </section>
+      {/* <MainPage /> */}
+      <SecondPage 
+      name={'date'}/>
     </div>
   );
 };

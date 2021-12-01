@@ -1,0 +1,67 @@
+.button {
+  min-width: 20rem;
+  padding: 1.2rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  border: none;
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.8s ease-out;
+}
+.button:hover {
+  background: var(--color-white);
+  color: var(--color-dark-blue);
+  text-shadow: none;
+}
+/*---------------------------------------------------------------------------*/
+.second-page .title,
+.second-page .input,
+.second-page .button {
+  margin-bottom: 4rem;
+}
+input {
+  width:100%;
+  padding: 1.5rem;
+  border: 1px solid var(--color-dark-blue);
+  background: var(--color-white);
+  border-radius: 8px;
+  font-size: 3rem;
+  color: var(--color-dark-blue);
+  box-shadow:var(--color-dark-blue) 2px 2px 3px;
+  font-family:inherit;
+  transition: all 0.5s ease-out;
+}
+input[type=text]:hover,
+input[type=text]:focus {
+  border: 1px solid var(--color-lite-blue);
+  box-shadow: var(--color-lite-blue) 2px 2px 3px;
+  outline:none;
+}
+input::placeholder {
+  color: var(--color-lite-blue);
+}
+.form {
+  text-align: right;
+}
+
+.output {
+  width: 100%;
+  background-color: var(--color-lite-blue);
+  padding: 5rem;
+  border-radius: 8px;
+  color: var(--color-white);
+  text-shadow: var(--color-dark-blue) 0px 0px 5px;
+  font-size: 3rem;
+  font-style: italic;
+  display: none;
+}
+
+.visible {
+  display: block;
+}

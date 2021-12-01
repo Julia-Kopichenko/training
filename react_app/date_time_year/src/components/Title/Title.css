@@ -7,7 +7,7 @@
   font-size: 8rem;
   text-align: center;
 }
-.title .second-word {
+.second-word {
   text-shadow: #02273f 0px 0px 10px;
   color: var(--color-white);
 }
