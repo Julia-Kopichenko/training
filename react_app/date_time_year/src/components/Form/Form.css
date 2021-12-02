@@ -1,30 +1,3 @@
-.button {
-  min-width: 20rem;
-  padding: 1.2rem;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 0.8rem;
-  border: none;
-  background: var(--color-dark-blue);
-  color: var(--color-white);
-  font-weight: bold;
-  font-size: 3rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  transition: all 0.8s ease-out;
-}
-.button:hover {
-  background: var(--color-white);
-  color: var(--color-dark-blue);
-  text-shadow: none;
-}
-/*---------------------------------------------------------------------------*/
-.second-page .title,
-.second-page .input,
-.second-page .button {
-  margin-bottom: 4rem;
-}
 input {
   width:100%;
   padding: 1.5rem;
@@ -48,6 +21,28 @@ input::placeholder {
 }
 .form {
   text-align: right;
+}
+
+.button {
+  min-width: 20rem;
+  padding: 1.2rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  border: none;
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.8s ease-out;
+}
+.button:hover {
+  background: var(--color-white);
+  color: var(--color-dark-blue);
+  text-shadow: none;
 }
 
 .output {

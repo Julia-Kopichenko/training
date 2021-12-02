@@ -1,19 +1,33 @@
 import React from 'react';
 
-// импортируем компоненты
-import MainPage from '../Pages/MainPage';
-import SecondPage from '../Pages/SecondPage';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from 'react-router-dom';
 
-// общие стили
+import MainPage from '../Pages/MainPage';
+import DatePage from '../Pages/DatePage';
+import NumberPage from '../Pages/NumberPage';
+import YearPage from '../Pages/YearPage';
+
 import './App.css';
 
 const App = () => {
   return (
-    <div className="container">
-      {/* <MainPage /> */}
-      <SecondPage 
-      name={'date'}/>
-    </div>
+    <Router>
+      <div className="container">
+
+        <Routes>
+
+          <Route exact path='/date' element = {<DatePage name={'date'}/>}></Route> 
+          <Route exact path='/number' element = {<NumberPage name={'number'}/>}></Route> 
+          <Route exact path='/year' element = {<YearPage name={'year'}/>}></Route> 
+          <Route path='/' element = {<MainPage />}></Route> 
+
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

@@ -19,3 +19,9 @@ body {
     margin: 0 auto;
     padding: 10rem 2rem;
 }
+.second-page .title,
+.second-page .input,
+.second-page .button {
+  margin-bottom: 4rem;
+}
+
