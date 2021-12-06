@@ -14,15 +14,16 @@ import YearPage from '../Pages/YearPage';
 import './App.css';
 
 const App = () => {
+  
   return (
     <Router>
       <div className="container">
 
         <Routes>
 
-          <Route exact path='/date' element = {<DatePage name={'date'}/>}></Route> 
-          <Route exact path='/number' element = {<NumberPage name={'number'}/>}></Route> 
-          <Route exact path='/year' element = {<YearPage name={'year'}/>}></Route> 
+          <Route exact path='/date' element = {<DatePage />}></Route> 
+          <Route exact path='/number' element = {<NumberPage />}></Route> 
+          <Route exact path='/year' element = {<YearPage />}></Route> 
           <Route path='/' element = {<MainPage />}></Route> 
 
         </Routes>

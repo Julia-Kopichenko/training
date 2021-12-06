@@ -3,15 +3,16 @@ import React from 'react';
 import Title from '../../Title';
 import Form from '../../Form';
 
-const YearPage = ({name}) => {
+const YearPage = () => {
+  const date = 'year';
 
   return (
     <section className="second-page">
         <Title text={'Please enter the'}/>
 
-        <p className="title second-word">{name}</p>
+        <p className="title second-word">{date}</p>
 
-        <Form name={name}/>
+        <Form name={date}/>
         
     </section>
   );
