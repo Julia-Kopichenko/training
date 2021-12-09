@@ -1,0 +1,19 @@
+.title {
+  text-shadow: #cce4f4 0px 0px 10px, #cce4f4 0 0 60px;
+  margin: 0px;
+  color: var(--color-dark-blue);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 8rem;
+  text-align: center;
+}
+.second-word {
+  text-shadow: #02273f 0px 0px 10px;
+  color: var(--color-white);
+}
+.subtitle {
+  color: var(--color-white);
+  text-shadow: var(--color-dark-blue) 0px 0px 5px;
+  font-size: 3rem;
+  font-style: italic;
+}

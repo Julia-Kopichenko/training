@@ -1,0 +1,9 @@
+.nav {
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--color-lite-blue);
+  border-radius: 8px;
+  padding: 5rem 0rem;
+}
+
