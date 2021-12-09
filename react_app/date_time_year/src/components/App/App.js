@@ -38,7 +38,6 @@ export default App;
 //       key={route.label}
 //       path={route.url}
 //       element={route.component}
-//       render={(props) => <route.component {...props} />}
 //     />
 //   )
 // }
