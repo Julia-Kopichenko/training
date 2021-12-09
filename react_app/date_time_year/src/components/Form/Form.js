@@ -11,23 +11,13 @@ const Form = ({ label }) => {
   const[value, setValue] = useState('')
   const[output, setOutput] = useState('')
 
-  const outputClass =  output ? 'visible' : '';
-  let placeholder = '';
-
-  switch (label) {
-    case 'date':
-      placeholder='month/day'
-      break;
-    case 'math':
-      placeholder='number'
-      break;
-    case 'year':
-      placeholder='year'
-    break;
-    default:
-      placeholder=''
-      break;
+  const placeholder = {
+    date: 'month/day',
+    math: 'number',
+    year: 'year'
   }
+
+  const outputClass =  output ? 'visible' : '';
 
   const onSearchChange = (e) => {
     const value = e.target.value;
@@ -50,7 +40,7 @@ const Form = ({ label }) => {
         <input 
           type="text" 
           className="input" 
-          placeholder={placeholder}
+          placeholder={placeholder[label]}
           value={value}
           onChange={onSearchChange} />
         <button 

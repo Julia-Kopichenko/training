@@ -7,8 +7,10 @@ import {
 } from 'react-router-dom';
 // import routes from '../../Pages/Routes/Routes';
 
-import MainPage from '../../Pages/MainPage';
-import SecondPage from '../../Pages/SearchPage';
+import {MainPage, SearchPage} from '../../Pages'
+
+// import MainPage from '../../Pages/MainPage';
+// import SearchPage from '../../Pages/SearchPage';
 
 import './App.css';
 
@@ -20,9 +22,9 @@ const App = () => {
 
         <Routes> 
 
-          <Route path='/date' element = {<SecondPage label ={'date'} />}></Route> 
-          <Route path='/number' element = {<SecondPage label ={'math'} />}></Route> 
-          <Route path='/year' element = {<SecondPage label ={'year'} />}></Route> 
+          <Route path='/date' element = {<SearchPage label = 'date' />}></Route> 
+          <Route path='/number' element = {<SearchPage label = 'math' />}></Route> 
+          <Route path='/year' element = {<SearchPage label = 'year' />}></Route> 
           <Route path='/' element = {<MainPage />}></Route>  
 
         </Routes>

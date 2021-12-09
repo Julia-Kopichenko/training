@@ -1,11 +1,12 @@
 import React from "react";
 
-import NavButton from "../NavButton";
+import { NavButton } from "..";
 
 import "./Nav.css";
 
 const Nav = () => {
-  return (
+
+    return (
     <div className="nav">
       <NavButton name="date"/>
       <NavButton name="number"/>

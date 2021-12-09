@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Title from '../../components/Title';
-import Nav from '../../components/Nav'
+import { Title, Nav } from '../../components';
 
 const MainPage = () => {
   return (

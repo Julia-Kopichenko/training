@@ -1,16 +1,19 @@
 import React from 'react';
+import { Title, Form } from '../../components';
 
-import Title from '../../components/Title';
-import Form from '../../components/Form';
+const SearchPage = ({ label }) => {
 
-const SearchPage = (props) => {
+  const titleText = {
+    date: 'date',
+    math: 'number',
+    year: 'year'
+  }
   
-  const {label} = props;
   return (
     <section className="second-page">
         <Title text={'Please enter the'}/>
 
-        <p className="title second-word">{label}</p>
+        <p className="title second-word">{titleText[label]}</p>
 
         <Form label={label}/>
         
