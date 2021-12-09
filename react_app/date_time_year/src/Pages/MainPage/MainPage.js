@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Title from '../../Title';
-import Nav from '../../Nav'
+import Title from '../../components/Title';
+import Nav from '../../components/Nav'
 
 const MainPage = () => {
   return (

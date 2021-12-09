@@ -20,11 +20,11 @@ export default class Form extends Component {
     // this.props.onSearchChange(term);
   }
 
-  handleSubmit = (e, name, value) => {
+  handleSubmit = (e, label, value) => {
     e.preventDefault();
 
     this.apiService
-      .getInfo(name,value)
+      .getDate(label, value)
       .then((body) => this.setState({
         output: body
       }))
@@ -32,17 +32,17 @@ export default class Form extends Component {
 
   render() {
 
-    const {name} = this.props;
+    const {label} = this.props;
     const {value, output} = this.state;
 
     const outputClass =  output ? 'visible' : '';
     
     let placeholder = '';
-    switch (name) {
+    switch (label) {
       case 'date':
         placeholder='month/day'
         break;
-      case 'number':
+      case 'math':
         placeholder='number'
         break;
       case 'year':
@@ -57,7 +57,7 @@ export default class Form extends Component {
       <div>
         <form 
           className="form"
-          onSubmit={(e) => this.handleSubmit(e, name, value)}>
+          onSubmit={(e) => this.handleSubmit(e, label, value)}>
           <input 
             type="text" 
             className="input" 

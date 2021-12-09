@@ -5,11 +5,10 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
+// import routes from '../../Pages/Routes/Routes';
 
-import MainPage from '../Pages/MainPage';
-import DatePage from '../Pages/DatePage';
-import NumberPage from '../Pages/NumberPage';
-import YearPage from '../Pages/YearPage';
+import MainPage from '../../Pages/MainPage';
+import SecondPage from '../../Pages/SearchPage';
 
 import './App.css';
 
@@ -19,17 +18,28 @@ const App = () => {
     <Router>
       <div className="container">
 
-        <Routes>
+        <Routes> 
 
-          <Route exact path='/date' element = {<DatePage />}></Route> 
-          <Route exact path='/number' element = {<NumberPage />}></Route> 
-          <Route exact path='/year' element = {<YearPage />}></Route> 
-          <Route path='/' element = {<MainPage />}></Route> 
+          <Route path='/date' element = {<SecondPage label ={'date'} />}></Route> 
+          <Route path='/number' element = {<SecondPage label ={'math'} />}></Route> 
+          <Route path='/year' element = {<SecondPage label ={'year'} />}></Route> 
+          <Route path='/' element = {<MainPage />}></Route>  
 
         </Routes>
       </div>
     </Router>
   );
 };
-
 export default App;
+
+// Object.values(routes).map(route => {
+//   return (
+//     <Route
+//       key={route.label}
+//       path={route.url}
+//       element={route.component}
+//       render={(props) => <route.component {...props} />}
+//     />
+//   )
+// }
+// )}
